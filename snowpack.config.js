@@ -7,19 +7,21 @@ module.exports = {
   plugins: [
     '@snowpack/plugin-dotenv',
     '@snowpack/plugin-typescript',
-    // "@snowpack/plugin-svelte",
     '@snowpack/plugin-sass',
     '@snowpack/plugin-postcss',
+    '@snowpack/plugin-svelte',
   ],
   packageOptions: {
+    polyfillNode: true,
     // source: 'remote',
     // types: true,
   },
   devOptions: {
+    port: 3000,
     open: 'none',
   },
-  // alias: {
-  //   components: "./src/components",
-  //   pages: "./src/pages",
-  // },
+  alias: {
+    // types: './types',
+    components: './src/components',
+  },
 }
