@@ -12,7 +12,7 @@ module.exports = {
     postcssPresetEnv(),
     postcssImport(),
     postcssNormalize(),
-    autoprefixer(),
+    isProd && autoprefixer(),
     isProd && cssnano(),
   ].filter(Boolean),
 }
