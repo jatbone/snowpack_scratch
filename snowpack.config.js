@@ -1,3 +1,6 @@
+// Snowpack Configuration File
+// See all supported options: https://www.snowpack.dev/reference/configuration
+
 /** @type {import("snowpack").SnowpackUserConfig } */
 module.exports = {
   mount: {
@@ -7,19 +10,29 @@ module.exports = {
   plugins: [
     '@snowpack/plugin-dotenv',
     '@snowpack/plugin-typescript',
-    // "@snowpack/plugin-svelte",
     '@snowpack/plugin-sass',
     '@snowpack/plugin-postcss',
   ],
   packageOptions: {
-    // source: 'remote',
+    polyfillNode: true,
     // types: true,
+    // source: 'remote',
   },
   devOptions: {
+    port: 3000,
     open: 'none',
   },
-  // alias: {
-  //   components: "./src/components",
-  //   pages: "./src/pages",
-  // },
+  buildOptions: {
+    /* ... */
+  },
+  alias: {
+    // types: './types',
+    // components: './src/components',
+  },
+  exclude: [
+    '**/node_modules/**/*',
+    '**/stories/**/*',
+    '**/*.stories.js',
+    '**/setupTests.(js|ts)',
+  ],
 }

@@ -1,5 +1,6 @@
 {
-  "include": ["src", "types"],
+  "include": ["src/*", "src/node_modules", "types"],
+  "exclude": ["node_modules/*", "public/*"],
   "compilerOptions": {
     "module": "ESNext",
     "target": "ESNext",
@@ -22,6 +23,7 @@
     "resolveJsonModule": true,
     "useDefineForClassFields": true,
     "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
     "importsNotUsedAsValues": "error"
   }
 }
