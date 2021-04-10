@@ -1,12 +1,18 @@
 {
   "extends": "@tsconfig/svelte/tsconfig.json",
-  "include": ["src/*", "src/node_modules", "types"],
-  "exclude": ["node_modules/*", "__sapper__/*", "public/*"],
+  "include": ["src", "types"],
+  "exclude": [
+    "**/node_modules/**",
+    "**/__tests__/**",
+    "__sapper__/*",
+    "public/*",
+    "./src/setupTests.ts"
+  ],
   "compilerOptions": {
     "module": "ESNext",
     "target": "ESNext",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "moduleResolution": "node",
+    "moduleResolution": "Node",
     "jsx": "preserve",
     "baseUrl": "./",
     "paths": {

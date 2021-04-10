@@ -1,0 +1,19 @@
+{
+  "extends": "./tsconfig.json",
+  "include": ["src"],
+  "exclude": [
+    "**/node_modules/**",
+    "**/__tests__/**",
+    "./src/setupTests.ts",
+    "./src/index.ts"
+  ],
+  "compilerOptions": {
+    "types": [],
+    "allowJs": true,
+    "checkJs": false,
+    "noEmit": false,
+    "baseUrl": "./src",
+    "declaration": true,
+    "declarationDir": "types"
+  }
+}
