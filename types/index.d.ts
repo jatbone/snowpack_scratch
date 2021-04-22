@@ -57,3 +57,14 @@ declare module '*.png' {
 }
 
 /* CUSTOM: ADD YOUR OWN HERE */
+
+declare interface ImportMeta {
+  env: {
+    SNOWPACK_PUBLIC_TEST: string
+  }
+}
+
+declare module 'components/*' {
+  import * as components from '../src/components/index'
+  export default components
+}

@@ -26,8 +26,10 @@ module.exports = {
     /* ... */
   },
   alias: {
-    // types: './types',
-    // components: './src/components',
+    types: './types',
+    components: './src/components',
+    // react: 'preact/compat',
+    // 'react-dom': 'preact/compat',
   },
   exclude: [
     '**/node_modules/**/*',

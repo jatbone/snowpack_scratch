@@ -1,11 +1,11 @@
 {
   "extends": "./tsconfig.json",
-  "include": ["./src/*", "types"],
+  "include": ["src", "types"],
   "exclude": [
     "**/node_modules/**",
     "**/__tests__/**",
     "./src/setupTests.ts",
-    "./src/index.ts"
+    "./src/index.tsx"
   ],
   "compilerOptions": {
     "allowJs": true,
@@ -15,7 +15,6 @@
     "baseUrl": ".",
     "declaration": true,
     "declarationDir": "./types",
-    "typeRoots": ["node_modules/@types", "types"],
-
+    "typeRoots": ["node_modules/@types", "types"]
   }
 }
