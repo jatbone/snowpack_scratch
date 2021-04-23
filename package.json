@@ -7,7 +7,7 @@
   "scripts": {
     "start": "snowpack dev",
     "build": "snowpack build",
-    "preview": "yarn run build && http-server build",
+    "preview": "yarn run build && http-server build --gzip --proxy http://localhost:8080? ",
     "format": "prettier --write \"src/**/*.{js,ts,svelte}\"",
     "lint": "prettier --check \"src/**/*.{js,ts,svelte}\"",
     "tsd": "tsc -p tsconfig-d.json --emitDeclarationOnly",
@@ -44,6 +44,8 @@
   },
   "dependencies": {
     "preact": "^10.5.13",
+    "preact-async-route": "^2.2.1",
+    "preact-router": "^3.2.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   }
