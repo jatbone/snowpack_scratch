@@ -37,4 +37,5 @@ module.exports = {
     '**/*.stories.js',
     '**/setupTests.(js|ts)',
   ],
+  routes: [{ match: 'routes', src: '.*', dest: '/index.html' }],
 }
