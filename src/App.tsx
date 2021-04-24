@@ -23,7 +23,7 @@ const Home: FunctionComponent<{
 /** demo header nav+search */
 const Header = () => (
   <header>
-    <nav>
+    <nav data-testid="nav">
       <a href="/">Home</a>
       <a href="/home">Home2</a>
     </nav>
@@ -31,7 +31,10 @@ const Header = () => (
 )
 
 /** fall-back route (handles unroutable URLs) */
-const Error = ({ type, url }: any) => (
+const Error: FunctionComponent<{
+  type?: string
+  url?: string
+}> = ({ type, url }) => (
   <section class="error">
     <h2>Error {type}</h2>
     <p>It looks like we hit a snag.</p>
