@@ -28,7 +28,7 @@ module.exports = {
   },
   alias: {
     // types: './types',
-    components: './src/components',
+    // components: './src/components',
   },
   exclude: [
     '**/node_modules/**/*',

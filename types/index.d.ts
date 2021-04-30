@@ -1,7 +1,4 @@
-/// <reference path="static.d.ts"  />
-
-interface ImportMeta {
-  env: {
-    SNOWPACK_PUBLIC_TEST: string
-  }
-}
+import App from './components/App.svelte';
+import './assets/styles/index.scss';
+declare const app: App;
+export default app;
